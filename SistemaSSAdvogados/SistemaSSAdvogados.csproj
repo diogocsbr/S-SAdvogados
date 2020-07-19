@@ -168,6 +168,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\maoli.js" />
+    <Content Include="Scripts\maoli.min.js" />
     <Content Include="Scripts\mascaras.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\validacao_ptbr.js" />
@@ -190,6 +192,7 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Scripts\maoli.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
