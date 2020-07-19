@@ -37,7 +37,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Documento, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control", placeholder = "000.000.000-00", data_tipo = "cpf" } })
                 @Html.ValidationMessageFor(model => model.Documento, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DataCadastro, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DataCadastro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.DataCadastro, new { htmlAttributes = new { @class = "form-control", placeholder = "00/00/0000", data_tipo = "data" } })
                 @Html.ValidationMessageFor(model => model.DataCadastro, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control", placeholder = "(00) 0 00000000", data_tipo = "telefone" } })
                 @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -72,6 +72,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/inputmask")
    
 }
