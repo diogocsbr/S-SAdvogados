@@ -218,6 +218,15 @@
       <DependentUpon>202007181558014_AddClienteAtivo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaSSAdvogados.Validacoes\SistemaSSAdvogados.Validacoes.csproj">
+      <Project>{60d47406-7b7e-4116-8c6f-159ed89d59dd}</Project>
+      <Name>SistemaSSAdvogados.Validacoes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

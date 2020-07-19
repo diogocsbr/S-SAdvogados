@@ -53,6 +53,28 @@ namespace SistemaSSAdvogados.Controllers
         {
             if (ModelState.IsValid)
             {
+                var cnpj = "";
+                var cpf = ""; //campo vindo da tela
+                //ao criar, digamos que voce quer validar o cpf ou cnpj
+
+                if (Validacoes.Gerais.ValidarCPF(cpf))
+                {
+                    //válido
+                }
+                else
+                {
+                    //inválido
+                }
+
+                if (Validacoes.Gerais.ValidarCNPJ(cnpj))
+                {
+                    //válido
+                }
+                else
+                {
+                    //inválido
+                }
+
                 db.Clientes.Add(cliente);
                 db.SaveChanges();
                 return RedirectToAction("Index");
