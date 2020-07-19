@@ -1,16 +1,22 @@
 ﻿@model SistemaSSAdvogados.Models.Cliente
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastro Cliente";
 }
+<script language="javascript" type="text/javascript">
+    $(function () {
+        $(".Documento").mask("999.999.999-99");
+    }
+    );
+</script>
 
-<h2>Create</h2>
+<h2>Cadastro de Cliente</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Cliente</h4>
         <hr />
@@ -26,7 +32,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Tipo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.Tipo, "Pessoa Física", new { @id = "TipoDoc" }) Pessoa Fisíca -
+                @Html.RadioButtonFor(model => model.Tipo, "Pessoa Jurídica", new { @id = "TipoDoc" }) Pessoa Juridica
                 @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,8 +41,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Documento, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control", placeholder = "000.000.000-00", data_tipo = "cpf" } })
                 @Html.ValidationMessageFor(model => model.Documento, "", new { @class = "text-danger" })
+                <script>
+                    $(function () {
+                        $("input[data-tipo=''cpf'']").mask("000.000.000-00");
+                        );
+                </script>
             </div>
         </div>
 
@@ -57,16 +69,24 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
 
+
+
 @section Scripts {
+  
+        
+
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/inputmask")
+
+
 }

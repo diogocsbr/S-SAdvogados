@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -15,8 +16,10 @@ namespace SistemaSSAdvogados.Controllers
         private AdvogaciaContext db = new AdvogaciaContext();
 
         // GET: Clientes
-        public ActionResult Index()
+        public ActionResult Index(string busca = null)
         {
+            if (busca != null)
+                return View(db.Clientes.Where(c => c.Nome.ToUpper().Contains(busca.ToUpper()) || c.Documento.Contains(busca)).ToList());
             return View(db.Clientes.ToList());
         }
 
@@ -110,7 +113,8 @@ namespace SistemaSSAdvogados.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Cliente cliente = db.Clientes.Find(id);
-            db.Clientes.Remove(cliente);
+            cliente.Ativo = false;
+            db.Clientes.AddOrUpdate(cliente);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

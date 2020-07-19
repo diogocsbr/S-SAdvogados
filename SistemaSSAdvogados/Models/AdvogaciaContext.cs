@@ -13,5 +13,6 @@ namespace SistemaSSAdvogados.Models
             Database.CreateIfNotExists();
         }
         public DbSet<Cliente> Clientes { get; set; }
+        
     }
 }

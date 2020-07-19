@@ -28,5 +28,7 @@ namespace SistemaSSAdvogados.Models
 
         [Required]
         public string Telefone { get; set; }
+
+        public bool Ativo { get; set; } = true;
     }
 }

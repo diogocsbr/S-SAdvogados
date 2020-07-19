@@ -88,3 +88,6 @@ C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\Sis
 C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.csproj.CopyComplete
 C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.dll
 C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.pdb
+C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.Migrations.InitialCreate.resources
+C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.csproj.GenerateResource.cache
+C:\Users\Esequias\Documents\GitHub\S-SAdvogados\SistemaSSAdvogados\obj\Debug\SistemaSSAdvogados.Migrations.AddClienteAtivo.resources
